@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokePlus - ポケパラをもっと便利に</title>
+    <meta name="description" content="pokePlusは、ポケパラ（pokepara.jp）をより快適に閲覧するためのブラウザアプリです。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .hero .description {
+            max-width: 560px;
+            margin: 0 auto 40px;
+            font-size: 1rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .badge.android {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+        }
+
+        .badge.android:hover {
+            background: #fff;
+        }
+
+        .badge.ios {
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        /* Features */
+        .features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 48px;
+            color: #333;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: #e91e63;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Notice */
+        .notice {
+            background: #fafafa;
+            padding: 48px 20px;
+        }
+
+        .notice-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .notice h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .notice ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice li {
+            padding: 6px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .notice li::before {
+            content: "\25B8 ";
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 16px 48px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>pokePlus</h1>
+        <p class="tagline">ポケパラをもっと便利に</p>
+        <p class="description">
+            pokePlus（ポケプラス）は、ポケパラ（pokepara.jp）をより快適に閲覧するためのブラウザアプリです。
+            ブログの読みやすさ向上、ワンタップいいね、自動ログインなど、日々の利用をサポートします。
+        </p>
+        <div class="badges">
+            <a href="#" class="badge android">Google Play で入手</a>
+            <a href="#" class="badge ios">TestFlight で入手 (iOS)</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>主な機能</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F4D6;</div>
+                <h3>余計な改行を自動削除</h3>
+                <p>ブログ記事に含まれる過剰な改行を自動的に整理し、読みやすく表示します。スクロールの手間が減り、内容に集中できます。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F44D;</div>
+                <h3>いいねボタンへワンタップ</h3>
+                <p>長いブログ記事でも、画面上のボタンをタップするだけで「いいね」「スーパーいいね」ボタンの位置まで一発でスクロールできます。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F510;</div>
+                <h3>自動ログイン</h3>
+                <p>一度ログイン情報を保存すれば、次回以降は自動でログイン。毎回の入力が不要になり、すぐにコンテンツを楽しめます。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="notice">
+        <div class="notice-inner">
+            <h2>ご注意</h2>
+            <ul>
+                <li>本アプリは18歳以上の方を対象としています</li>
+                <li>本アプリはポケパラの公式アプリではありません</li>
+                <li>ポケパラのサービス利用にはポケパラの利用規約が適用されます</li>
+                <li>ログイン情報はお客様の端末内にのみ保存され、外部サーバーへの送信は一切行いません</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
+        <p>お問い合わせ: <a href="mailto:23taka23@gmail.com">23taka23@gmail.com</a></p>
+        <p>&copy; 2025 pokePlus</p>
+    </footer>
+</body>
+
+</html>
