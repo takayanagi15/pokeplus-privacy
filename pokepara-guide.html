@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokePlus＋ ポケパラ活用ガイド</title>
+    <meta name="description" content="ポケパラのアクセスアップ・いいね増加・ブログ運営のコツを解説するPokePlus＋公式ガイドです。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.8;
+            -webkit-text-size-adjust: 100%;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            color: #fff;
+            text-align: center;
+            padding: 48px 20px 36px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+
+        .header .credit {
+            font-size: 0.78rem;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+
+        .toc {
+            max-width: 720px;
+            margin: -20px auto 0;
+            padding: 0 16px;
+        }
+
+        .toc-inner {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .toc h2 {
+            font-size: 1rem;
+            color: #e91e63;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            padding: 0;
+        }
+
+        .toc li {
+            counter-increment: toc;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .toc a:hover {
+            color: #e91e63;
+        }
+
+        .toc a::before {
+            content: counter(toc);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: #fce4ec;
+            color: #e91e63;
+            border-radius: 50%;
+            font-size: 0.72rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .toc .stars {
+            color: #e91e63;
+            font-size: 0.75rem;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .toc-usage {
+            margin-top: 16px;
+            padding: 12px 14px;
+            background: #fff8e1;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: #6d4c00;
+            line-height: 1.6;
+        }
+
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
+
+        .chapter {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #fce4ec;
+        }
+
+        .chapter-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .chapter-header h2 {
+            font-size: 1.15rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .chapter h3 {
+            font-size: 1rem;
+            color: #e91e63;
+            margin: 20px 0 10px;
+            padding-left: 10px;
+            border-left: 3px solid #e91e63;
+        }
+
+        .chapter p {
+            font-size: 0.88rem;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .chapter ul,
+        .chapter ol {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .chapter li {
+            font-size: 0.86rem;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .tip {
+            background: #fff8e1;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0;
+            font-size: 0.84rem;
+            color: #6d4c00;
+            line-height: 1.7;
+        }
+
+        .tip::before {
+            content: "⭐ ";
+        }
+
+        .tip-label {
+            font-weight: 700;
+            display: inline;
+        }
+
+        .note {
+            background: #fce4ec;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0;
+            font-size: 0.84rem;
+            color: #880e4f;
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 12px 0;
+            font-size: 0.84rem;
+        }
+
+        .example-bad {
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .example-bad::before {
+            content: "△ ";
+            font-weight: 700;
+        }
+
+        .example-good {
+            color: #2e7d32;
+        }
+
+        .example-good::before {
+            content: "◎ ";
+            font-weight: 700;
+        }
+
+        .sub-heading {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #555;
+            margin: 14px 0 6px;
+        }
+
+        .sub-heading::before {
+            content: "▸ ";
+            color: #e91e63;
+        }
+
+        .target-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 12px 0;
+        }
+
+        .target-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 0.82rem;
+        }
+
+        .target-card strong {
+            display: block;
+            color: #e91e63;
+            font-size: 0.78rem;
+            margin-bottom: 4px;
+        }
+
+        .appendix {
+            background: #f3e5f5;
+        }
+
+        .appendix .chapter-header {
+            border-bottom-color: #ce93d8;
+        }
+
+        .formula {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 12px 0;
+            font-size: 0.86rem;
+            text-align: center;
+            font-weight: 600;
+            color: #6a1b9a;
+        }
+
+        .app-box {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            border: 1px solid #f8bbd0;
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin: 16px 0;
+            font-size: 0.84rem;
+            color: #4a148c;
+            line-height: 1.7;
+        }
+
+        .app-box-title {
+            font-weight: 800;
+            font-size: 0.88rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .app-box-title .app-logo {
+            color: #e91e63;
+        }
+
+        .app-box ul {
+            padding-left: 16px;
+            margin: 6px 0 0;
+        }
+
+        .app-box li {
+            margin-bottom: 4px;
+            color: #4a148c;
+        }
+
+        .app-section {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
+        }
+
+        .app-section .chapter-header {
+            border-bottom-color: #f48fb1;
+        }
+
+        .app-feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0;
+        }
+
+        .app-feature-item {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.82rem;
+            color: #333;
+        }
+
+        .app-feature-item .feat-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .app-feature-item strong {
+            display: block;
+            font-size: 0.85rem;
+            color: #880e4f;
+            margin-bottom: 4px;
+        }
+
+        .app-badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .app-badges a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            transition: opacity 0.2s;
+        }
+
+        .app-badges a:hover {
+            opacity: 0.85;
+        }
+
+        .app-badges .dl-android {
+            background: #34a853;
+        }
+
+        .app-badges .dl-ios {
+            background: #333;
+        }
+
+        .app-badges svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 500px) {
+            .app-feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .app-badges {
+                flex-direction: column;
+            }
+
+            .app-badges a {
+                justify-content: center;
+            }
+        }
+
+        .warning {
+            background: #fff3e0;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin: 14px 0;
+            font-size: 0.84rem;
+            color: #e65100;
+            line-height: 1.7;
+        }
+
+        .warning ul {
+            padding-left: 16px;
+            margin-bottom: 0;
+        }
+
+        .closing {
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .closing strong {
+            color: #e91e63;
+        }
+
+        .back-link {
+            text-align: center;
+            padding: 0 16px 32px;
+        }
+
+        .back-link a {
+            color: #e91e63;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 600px) {
+            .header {
+                padding: 64px 20px 48px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .chapter {
+                padding: 32px 28px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .target-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>PokePlus＋ ポケパラ活用ガイド</h1>
+        <p class="subtitle">アクセスUP・いいね増加・ブログ運営のコツ</p>
+        <p class="credit">ポケパラを最大限活用するためのノウハウを集約<br>PokePlus＋チームが現役キャストの声をもとに作成</p>
+    </header>
+
+    <nav class="toc">
+        <div class="toc-inner">
+            <h2>目次</h2>
+            <ol>
+                <li><a href="#ch1">プロフィールの最適化 <span class="stars">★★★</span></a></li>
+                <li><a href="#ch2">いいね周りを効率化する <span class="stars">★★★</span></a></li>
+                <li><a href="#ch3">ゴールドを効率よく貯める <span class="stars">★★</span></a></li>
+                <li><a href="#ch4">ブログで差をつけるコツ <span class="stars">★★</span></a></li>
+                <li><a href="#ch5">会員さんとの関係構築 <span class="stars">★</span></a></li>
+                <li><a href="#ch6">SNSを連携して集客する <span class="stars">★</span></a></li>
+                <li><a href="#pokeplus">PokePlus＋ でポケ活を加速 <span class="stars" style="color:#9c27b0;">★★★</span></a></li>
+                <li><a href="#appendix">ランキングとポイントの仕組み</a></li>
+            </ol>
+            <div class="toc-usage">
+                <strong>❤ このガイドの読み方</strong><br>
+                まずは気軽に始めたい方 → Step 1・2 を試してみましょう。<br>
+                本格的に順位を上げたい方 → 全Stepを順番に実践していきましょう。
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <article class="chapter" id="ch1">
+            <div class="chapter-header">
+                <span class="chapter-num">1</span>
+                <h2>プロフィールの最適化<br><small style="font-size:0.75rem;color:#888">～見てもらえるページの作り方～</small></h2>
+            </div>
+            <p>ポケパラのアクセスポイントは、プロフィールやブログの「閲覧数」と「ページに留まっている時間」によって決まります。まずは簡単に成果が出るプロフィールの見直しから始めるのがおすすめです。</p>
+
+            <h3>1-1 写真は数と更新頻度がカギ</h3>
+            <p>プロフ写真はアクセスに直結する重要な要素です。以下のポイントを意識しましょう。</p>
+            <ul>
+                <li>登録枠は最大30枚。まずは10枚以上を目標に充実させましょう</li>
+                <li>写真が多いほどページの閲覧時間が長くなり、ポイント加算につながります</li>
+                <li>季節のイベント（バレンタイン・夏祭り・クリスマス等）があるたびに入れ替えると効果的です</li>
+            </ul>
+
+            <p class="sub-heading">顔出しが難しい方は</p>
+            <p>横顔やアゴ下のアングル、あるいは星や花の加工スタンプで顔の一部を隠す方法がよく使われています。加工アプリのフィルタを活用すれば、雰囲気を壊さず自然に仕上がります。</p>
+
+            <p class="sub-heading">写真のネタに困ったら</p>
+            <p>ドリンクやフード、コスプレ衣装、ネイルやヘアスタイルの変化など、日常のちょっとした出来事を写真にするだけでも十分です。お客様が「この子はどんな子なんだろう」と興味を持つきっかけになります。</p>
+
+            <p class="sub-heading">ショート動画も有効</p>
+            <p>15秒程度の短い動画でも、静止画より長くページに留まってもらいやすくなります。完成度よりも「動いている」ことが大事なので、気軽に撮ったものでOKです。</p>
+
+            <h3>1-2 自己紹介文を充実させる</h3>
+            <p>プロフィールの質問欄は、一言よりも2〜3文で答える方が閲覧時間が伸びます。自分の個性が伝わるように書きましょう。</p>
+
+            <div class="example-box">
+                <div class="example-bad">「ラーメン」</div>
+                <div class="example-good">「ラーメンが大好きです！特に豚骨が好きで、休みの日は一蘭に通ってます。替え玉2回は当たり前です笑」</div>
+            </div>
+            <p>エピソードを入れるだけで、ぐっと親しみやすい印象になります。</p>
+
+            <div class="tip"><span class="tip-label">上級テクニック</span><br>ポケパラでは自己紹介欄を自由にカスタマイズできます。ランキング上位のページを参考に、文字色やレイアウトを工夫して自分だけのオリジナルページを作ってみましょう。</div>
+
+            <h3>1-3 表示名で印象を残す</h3>
+            <p>いいね欄に表示される名前は、ひと目で印象に残る工夫をすると、いいね返しの確率が上がります。</p>
+
+            <div class="example-box">
+                <div class="example-bad">みく</div>
+                <div class="example-good">🎀✨みく(ガルバ○○店)✨🎀 や みく🐱夜カフェ△△</div>
+            </div>
+            <p>店名やキャッチーな絵文字を添えて名前を長くすると、いいね欄でのスペースが広がり、見つけてもらいやすくなります。</p>
+        </article>
+
+        <article class="chapter" id="ch2">
+            <div class="chapter-header">
+                <span class="chapter-num">2</span>
+                <h2>いいね周りを効率化する<br><small style="font-size:0.75rem;color:#888">～お気に入り機能のフル活用～</small></h2>
+            </div>
+            <p>いいね周りの目的は、自分のブログへの「いいね返し」を促すことです。返してくれる相手を中心にいいねを回すと、少ない手間で効率よくポイントを伸ばせます。</p>
+
+            <h3>2-1 お気に入り機能を使った管理術</h3>
+            <p>いいね欄は文字が小さく操作しにくいため、お気に入り機能を使って管理すると格段にラクになります。</p>
+            <ol>
+                <li>まずは色々なキャストのブログにいいねしながら、お気に入り登録もしていきます</li>
+                <li>しばらく経ったら、お気に入り一覧を古い順に並び替えて確認します</li>
+                <li>いいね返しがない方や、長期間（2週間以上）更新がない方はお気に入りを外します</li>
+                <li>この「登録→整理」のサイクルを続けることで、反応率の高いリストができあがります</li>
+            </ol>
+
+            <div class="tip"><span class="tip-label">いいね周りの時短ワザ</span><br>お気に入りページからブログタイトルをタップすれば最新記事に直接飛べます。また「最新のブログを見る」のリンクを使うと、プロフィールを経由せずに記事へアクセスできるので時短になります。</div>
+
+            <h3>2-2 1日のいいね目安</h3>
+            <div class="target-box">
+                <div class="target-card">
+                    <strong>まずはノルマ分だけ</strong>
+                    無料枠の1日100いいねを目標に。お気に入りリストから順に押していくのが手軽です。
+                </div>
+                <div class="target-card">
+                    <strong>上位を狙うなら</strong>
+                    ゴールドを使って100回以上いいね。お気に入りを数百人以上に増やし、毎日こまめに回しましょう。
+                </div>
+            </div>
+
+            <div class="app-box">
+                <div class="app-box-title"><span class="app-logo">📱</span> PokePlus＋ でいいね周りを高速化</div>
+                PokePlus＋なら、いいね周りの面倒な作業を大幅に時短できます。
+                <ul>
+                    <li><strong>ワンタップいいね</strong> ── 長いブログでも画面下部のボタンを押すだけで「いいね」「SPいいね」の位置まで一発スクロール。いいね済みかどうかも一目で分かります</li>
+                    <li><strong>ブログタブ表示</strong> ── 一覧ページからブログをタップするとオーバーレイで記事が開くので、元のページを離れずに次々と読めます。戻るのもワンタップ</li>
+                    <li><strong>フィルタ機能</strong> ── イイネ履歴やフォロワー一覧で「いいね済みを非表示」に切り替えられるので、まだチェックしていない相手だけを効率的に確認できます</li>
+                </ul>
+            </div>
+
+            <h3>2-3 SPいいねで存在感を出す</h3>
+            <p>通常いいねでのポイント稼ぎが安定してきたら、SPいいねも取り入れてみましょう。ゴールドを使いますが、その分相手に強く印象が残ります。</p>
+            <ul>
+                <li>ゴールド設定は100～1000。高いほどSP欄で上位に表示されるので、可能なら高めに設定しましょう</li>
+                <li>SP欄には15文字までコメントが書けます。「ネイル可愛い」「楽しそう！」などブログに触れた一言を添えると返しやすくなります</li>
+                <li>全員のブログを丁寧に読む必要はありません。SPを送る相手のブログだけ目を通しましょう</li>
+            </ul>
+        </article>
+
+        <article class="chapter" id="ch3">
+            <div class="chapter-header">
+                <span class="chapter-num">3</span>
+                <h2>ゴールドを効率よく貯める<br><small style="font-size:0.75rem;color:#888">～いいね拡張の資金源～</small></h2>
+            </div>
+            <p>1日の無料いいね枠は100回。それ以上は1いいね＝10ゴールドで押すことができます。つまりゴールドをどれだけ持っているかが、いいね数を伸ばせるかどうかのカギになります。</p>
+
+            <h3>3-1 主なゴールド獲得手段</h3>
+            <ul>
+                <li><strong>毎日ログイン：</strong>ログインするだけでコツコツ貯まります</li>
+                <li><strong>ブログ投稿：</strong>100文字以上の記事を投稿すると500Gがもらえます</li>
+                <li><strong>お題への回答：</strong>不定期で募集されるお題に答えるともらえます</li>
+                <li><strong>会員ゴールドバック：</strong>会員から贈られたゴールドの10%が還元されます</li>
+            </ul>
+
+            <h3>3-2 「女の子の声」を活用しよう</h3>
+            <p>最も効率的なのが「女の子の声」への回答です。1件の回答で<strong>5,000G</strong>もらえるため、これを中心にゴールドを貯めていくのが賢い方法です。お題は200件以上あり、毎週追加されるので、空き時間にコツコツ答えていきましょう。</p>
+
+            <div class="tip"><span class="tip-label">知っておくと便利</span><br>過去に回答したお題でも、内容を書き換えれば再度ゴールドが獲得できます（1日1回まで）。ただし50文字以上の変更が必要で、表現の言い回しをしっかり変える必要があります。AI文章ツールなどで言い換えを作ると手早く対応できます。</div>
+        </article>
+
+        <article class="chapter" id="ch4">
+            <div class="chapter-header">
+                <span class="chapter-num">4</span>
+                <h2>ブログで差をつけるコツ<br><small style="font-size:0.75rem;color:#888">～読まれるタイトルと構成～</small></h2>
+            </div>
+            <p>ブログは更新するだけでは十分ではありません。タイトルの付け方や写真の使い方を少し工夫するだけで、読まれる確率が大きく変わります。</p>
+
+            <h3>4-1 気になるタイトルの付け方</h3>
+            <p>「おはよう」「今日も出勤」のような当たり障りのないタイトルだと、いいね周りの中でスルーされがちです。タイトルは"読んでみたい"と思わせる工夫をしましょう。</p>
+
+            <div class="example-box">
+                <p style="margin-bottom:4px"><strong>タイトル例</strong></p>
+                <ul style="padding-left:16px;margin-bottom:0">
+                    <li>【衝撃】この前やらかしました…… → 本文：メイクポーチをまるごと電車に忘れた</li>
+                    <li>【散財】ついにあれ買っちゃった → 本文：ずっと欲しかったデパコスの限定パレット</li>
+                    <li>【実は…】ずっと黙ってたけど → 本文：じつは犬アレルギーなのに3匹飼ってます</li>
+                </ul>
+            </div>
+            <p>中身がどんなに些細なことでもOKです。大げさなタイトルとのギャップが面白いと、コメントやSPが増えるきっかけにもなります。</p>
+
+            <h3>4-2 改行と見やすさのバランス</h3>
+            <p>スクロール量を増やすために空行を大量に入れている方がいますが、やりすぎは逆効果です。一画面に最低でも2〜3行の文章が見えるくらいの改行量がちょうど良いです。</p>
+
+            <div class="app-box">
+                <div class="app-box-title"><span class="app-logo">📱</span> PokePlus＋ なら改行問題をクリア</div>
+                <ul>
+                    <li><strong>改行の自動整理</strong> ── 他のキャストのブログを読むとき、過剰な改行や空白を自動で整理して表示してくれます。無駄なスクロールなしで内容に集中できるので、いいね周りの効率もアップ</li>
+                    <li><strong>文字サイズ変更</strong> ── 小・中・大の4段階から好みのサイズを選べるので、どんなブログも読みやすく。設定はアプリに保存されるので毎回変える必要はありません</li>
+                </ul>
+            </div>
+
+            <h3>4-3 量より質で勝負する</h3>
+            <p>1日に何本も短いブログを上げるよりも、写真付きの読みごたえがある記事を1本しっかり書く方が、閲覧時間が伸びやすいです。内容が充実していると、いいねだけでなくコメントやSPも増えます。</p>
+
+            <h3>4-4 感謝ブログは最強のコンテンツ</h3>
+            <p>来店してくれたお客様へのお礼を書いたブログは、確実に読んでもらえる強力なコンテンツです。イニシャルやニックネームで呼びかけながら、その日の出来事を振り返りましょう。</p>
+            <ul>
+                <li>初来店のお客様にも「今日のこと書くから見てね！」と案内できる</li>
+                <li>ドリンクやプレゼントと一緒に写真を撮って添えると好印象</li>
+                <li>記憶が新しいうちに書くか、キーワードだけでもメモしておくのがコツ</li>
+            </ul>
+
+            <h3>4-5 写真でブログの魅力をUP</h3>
+            <p>お客様はキャストの日常が気になるもの。写真をたくさんブログに載せていきましょう。</p>
+            <ul>
+                <li>プレゼントや花束と一緒に撮ると、華やかで情報量のある1枚になります</li>
+                <li>顔出ししない場合は、ヘアアレンジ・ネイル・アクセサリーなどパーツを見せる工夫を</li>
+                <li>撮影は凝らなくてOK。スマホの自撮りで十分です</li>
+            </ul>
+
+            <div class="example-box">
+                <div class="example-bad">「美容Day」美容院に行ってきました！さっぱりした。（写真なし）</div>
+                <div class="example-good">「【Before→After】推しの美容師さんにお任せしたら別人になった件」ビフォーアフターの写真付き・施術中のエピソード・「次はどんな色にしようかな？」でコメントを誘導</div>
+            </div>
+
+            <div class="tip"><span class="tip-label">お客様との距離を縮めるワザ</span><br>ブログではプライベートを広く発信しつつ、個別のLINEやDMでは「ブログに載せてない写真だよ」と限定感のある内容を送ると、特別感を演出できます。全員に送っても「自分だけ」と思ってもらえる工夫が大事です。</div>
+        </article>
+
+        <article class="chapter" id="ch5">
+            <div class="chapter-header">
+                <span class="chapter-num">5</span>
+                <h2>会員さんとの関係構築</h2>
+            </div>
+            <p>アクセスポイントの高いキャストの多くは、一般会員さんからのいいねも多く集めています。会員さんが書く「体験談」にいいねやSPを送ることで、お返しのいいねをもらいやすくなります。</p>
+
+            <h3>5-1 会員さんへの働きかけ</h3>
+            <ol>
+                <li>まずは会員さんのページをお気に入り登録します</li>
+                <li>体験談に積極的にいいねを送りましょう（可能な範囲でたくさん）</li>
+                <li>SPいいねも効果的。ゴールドに余裕があれば高めに設定すると目立ちます</li>
+            </ol>
+
+            <p class="sub-heading">SPで書くと好印象な内容</p>
+            <ul>
+                <li>「体験談いつも楽しく読んでます」</li>
+                <li>「フォローさせてもらいました！」</li>
+                <li>プロフの趣味に触れたコメント（例：「私もスイーツ巡り好きです！」）</li>
+            </ul>
+            <p>オンラインでの交流がきっかけで実際の来店につながるケースもあります。負担にならない範囲で、気軽にコミュニケーションを取っていきましょう。</p>
+
+            <div class="app-box">
+                <div class="app-box-title"><span class="app-logo">📱</span> PokePlus＋ のブックマークで会員管理</div>
+                よくやり取りする会員さんのページは、PokePlus＋の<strong>ブックマーク機能</strong>で保存しておくと便利です。メニューからワンタップでアクセスでき、体験談へのいいね周りがスムーズになります。自動ログイン機能と組み合わせれば、アプリを開いた瞬間からすぐに作業を始められます。
+            </div>
+        </article>
+
+        <article class="chapter" id="ch6">
+            <div class="chapter-header">
+                <span class="chapter-num">6</span>
+                <h2>SNSを連携して集客する</h2>
+            </div>
+            <p>お店用のSNSアカウント（Instagram・X・TikTokなど）を持っている方は、そこからポケパラのページへ誘導することで外部からのアクセスを獲得できます。</p>
+            <ul>
+                <li>Instagramのストーリーやハイライトにポケパラのリンクを設置する</li>
+                <li>Xでブログ更新のたびにURLを投稿する</li>
+                <li>TikTokのプロフィール欄にポケパラのURLを入れておく</li>
+            </ul>
+            <p>フォロワー数は関係ありません。少人数でもポケパラ外からのアクセスは貴重なポイント源になります。使えるチャネルは全て活用しましょう。</p>
+
+            <div class="tip"><span class="tip-label">連携投稿も活用</span><br>ポケパラのブログ投稿時にSNS連携投稿を設定しておくと、自動でXなどにリンクが投稿されます。設定しておくだけで手間なく宣伝できるので、まだの方はぜひ有効にしましょう。</div>
+        </article>
+
+        <article class="chapter app-section" id="pokeplus">
+            <div class="chapter-header">
+                <span class="chapter-num" style="background:linear-gradient(135deg,#e91e63,#9c27b0);">+</span>
+                <h2>PokePlus＋ でポケ活を加速しよう</h2>
+            </div>
+            <p>ここまで紹介してきたテクニックは、どれも日々の地道な作業の積み重ねです。PokePlus＋は、その毎日の作業をもっとラクに・もっと速くするために生まれたアプリです。</p>
+
+            <div class="app-feature-grid">
+                <div class="app-feature-item">
+                    <span class="feat-icon">👍</span>
+                    <strong>ワンタップいいね</strong>
+                    長いブログを最後までスクロールしなくても、画面下部のボタン1つでいいね・SPいいねの場所へ直行。いいね済みかどうかも色で一目瞭然です。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">📑</span>
+                    <strong>ブログタブ表示</strong>
+                    一覧ページからブログを開くとオーバーレイで表示。閉じれば元の位置に戻るので、お気に入りリストからの連続いいね周りが格段にスムーズになります。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">📖</span>
+                    <strong>改行の自動整理</strong>
+                    ブログの過剰な改行・空白を自動で整理して表示。無駄なスクロールが減り、1ブログあたりの閲覧時間を短縮。いいね周りの効率がアップします。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">🔍</span>
+                    <strong>フィルタ機能</strong>
+                    イイネ履歴やフォロワー一覧で「いいね済み」「お気に入り済み」を非表示に。未チェックの相手だけを一覧で確認でき、見落としを防ぎます。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">🔐</span>
+                    <strong>自動ログイン</strong>
+                    ログイン情報を一度保存すれば、以降は自動でログイン。会員・女の子・店舗の3種類それぞれ個別に管理できます。毎回の入力ストレスをゼロに。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">🔖</span>
+                    <strong>ブックマーク</strong>
+                    よく訪れるページを保存しておけば、メニューからワンタップでアクセス。お気に入りキャストの一覧、ゴールド管理ページなど、好きなページをすぐに開けます。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">🔤</span>
+                    <strong>文字サイズ変更</strong>
+                    4段階の文字サイズから選択可能。小さい文字が見づらい方も、自分に合ったサイズで快適にブログを読めます。設定はアプリに保存されます。
+                </div>
+                <div class="app-feature-item">
+                    <span class="feat-icon">📶</span>
+                    <strong>オフライン対応</strong>
+                    通信が切れても自動でエラー画面を表示し、復帰すると自動再読み込み。移動中の不安定な回線でも安心して使えます。
+                </div>
+            </div>
+
+            <p style="margin-top:8px;">これらの機能はすべて、女の子ログインまたは店舗ログインで<strong>30日間無料</strong>で体験できます。まずは気軽にお試しください。</p>
+
+            <div class="app-badges">
+                <a href="https://play.google.com/store/apps/details?id=jp.serendipy.pokeplus" class="dl-android">
+                    <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.37 2.37 0 0 1-.497-1.5V3.313c0-.564.19-1.08.496-1.5zm.859-.744L15.98 7.89l-2.886 2.886L4.468 1.07zm11.516 5.457l2.225 1.283c.934.539.934 1.841 0 2.38l-2.5 1.441-2.834-2.834 3.109-2.27zm-3.97 5.677l2.834-2.204-9.283 5.358 6.449-3.154z"/></svg>
+                    Google Play で入手
+                </a>
+                <a href="https://testflight.apple.com/join/8aCMV64J" class="dl-ios">
+                    <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    TestFlight で入手 (iOS)
+                </a>
+            </div>
+        </article>
+
+        <article class="chapter appendix" id="appendix">
+            <div class="chapter-header">
+                <span class="chapter-num" style="background:#7b1fa2;">A</span>
+                <h2>ランキングとポイントの仕組み</h2>
+            </div>
+
+            <h3>ポイント計算の基本</h3>
+            <div class="formula">アクセス数 × 平均滞在時間（秒）÷ 30<br><small style="font-weight:400;color:#888;">※滞在時間は上限30秒で計算される</small></div>
+            <p>「アクセス数を増やす」と「ページに長く留まってもらう」の2つを同時に伸ばすことが、ポイントアップへの近道です。</p>
+
+            <h3>ランキング更新について</h3>
+            <ul>
+                <li>ランキングは毎朝9時ごろに更新されます</li>
+                <li>直近1週間分のポイントの合計で順位が決まります</li>
+                <li>1日調子が悪くても、残りの日で巻き返すことが可能です</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠ 利用上の注意</strong>
+                <ul>
+                    <li>ツールや業者を使った自動いいねはポケパラの利用規約で禁止されています</li>
+                    <li>不審なメッセージや個人情報の聞き出しは運営に通報しましょう</li>
+                    <li>ブログの内容はガイドラインを守り、不適切な表現は避けましょう</li>
+                </ul>
+            </div>
+        </article>
+
+        <div class="closing">
+            毎日の小さな積み重ねが、<br>大きな成果につながります。<br><br>
+            <strong>自分のペースで楽しみながら<br>ポケ活を続けていきましょう。</strong><br><br>
+            PokePlus＋と一緒に、もっと効率的で楽しいポケ活を。<br>
+            <a href="https://play.google.com/store/apps/details?id=jp.serendipy.pokeplus" style="color:#e91e63;text-decoration:none;font-weight:600;">Android</a>
+            ・
+            <a href="https://testflight.apple.com/join/8aCMV64J" style="color:#e91e63;text-decoration:none;font-weight:600;">iOS</a>
+            で今すぐ無料ダウンロード！
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← PokePlus＋ トップページへ</a>
+        </div>
+    </main>
+</body>
+
+</html>
