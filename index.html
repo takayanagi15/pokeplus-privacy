@@ -145,6 +145,78 @@
             line-height: 1.7;
         }
 
+        /* Guide Banner */
+        .guide-banner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 48px;
+        }
+
+        .guide-banner-inner {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
+            border-radius: 16px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(233, 30, 99, 0.1);
+        }
+
+        .guide-banner-inner h2 {
+            font-size: 1.3rem;
+            color: #880e4f;
+            margin-bottom: 12px;
+        }
+
+        .guide-banner-inner p {
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .guide-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .guide-link:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .guide-link:active {
+            transform: scale(0.97);
+        }
+
+        @media (max-width: 600px) {
+            .guide-banner {
+                padding: 0 16px 32px;
+            }
+
+            .guide-banner-inner {
+                padding: 28px 20px;
+            }
+
+            .guide-banner-inner h2 {
+                font-size: 1.1rem;
+            }
+
+            .guide-banner-inner p {
+                font-size: 0.85rem;
+            }
+
+            .guide-link {
+                padding: 12px 28px;
+                font-size: 0.92rem;
+            }
+        }
+
         /* Notice */
         .notice {
             background: #fafafa;
@@ -393,6 +465,14 @@
                     <p>ネットワーク接続が切れた場合はエラー画面を表示し、復帰すると自動でページを再読み込みします。不安定な回線でも安心してご利用いただけます。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="guide-banner">
+        <div class="guide-banner-inner">
+            <h2>📘 ポケパラ活用ガイド公開中</h2>
+            <p>アクセスUP・いいね増加・ブログ運営のコツなど、<br>ポケパラを最大限活用するためのノウハウをまとめました。<br>PokePlus＋と組み合わせて、もっと効率的なポケ活を始めましょう。</p>
+            <a href="pokepara-guide.html" class="guide-link">ガイドを読む →</a>
         </div>
     </section>
 
