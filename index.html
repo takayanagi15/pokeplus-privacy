@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokePlus - ポケパラをもっと便利に</title>
-    <meta name="description" content="PokePlusは、ポケパラ（pokepara.jp）をより快適に閲覧するためのブラウザアプリです。">
+    <title>PokePlus＋ - ポケパラをもっと便利に</title>
+    <meta name="description" content="PokePlus＋は、ポケパラ（pokepara.jp）をより快適に閲覧するためのブラウザアプリです。">
     <style>
         * {
             margin: 0;
@@ -17,6 +17,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             color: #333;
             line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
         }
 
         /* Hero */
@@ -51,24 +52,40 @@
         .badges {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             flex-wrap: wrap;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
             text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
             font-size: 0.95rem;
             font-weight: 600;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.1s;
+            min-height: 48px;
+        }
+
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            flex-shrink: 0;
         }
 
         .badge:hover {
             background: rgba(255, 255, 255, 0.35);
+        }
+
+        .badge:active {
+            transform: scale(0.97);
         }
 
         .badge.android {
@@ -101,29 +118,29 @@
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 32px;
+            gap: 24px;
         }
 
         .feature-card {
             background: #f8f9fa;
             border-radius: 12px;
-            padding: 32px 24px;
+            padding: 28px 24px;
             text-align: center;
         }
 
         .feature-icon {
             font-size: 2.5rem;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .feature-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
             color: #e91e63;
         }
 
         .feature-card p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #555;
             line-height: 1.7;
         }
@@ -183,27 +200,108 @@
             text-decoration: underline;
         }
 
-        /* Responsive */
+        /* Responsive - Mobile */
         @media (max-width: 600px) {
             .hero {
-                padding: 60px 16px 48px;
+                padding: 48px 16px 36px;
             }
 
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .hero .tagline {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .hero .description {
+                font-size: 0.9rem;
+                margin-bottom: 28px;
+                line-height: 1.7;
             }
 
             .badges {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
+                gap: 10px;
+                max-width: 280px;
+            }
+
+            .badge {
+                padding: 14px 20px;
+                font-size: 0.9rem;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .features {
+                padding: 40px 16px;
+            }
+
+            .features h2 {
+                font-size: 1.4rem;
+                margin-bottom: 28px;
             }
 
             .feature-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .feature-card {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                padding: 16px;
+                gap: 14px;
+                border-radius: 10px;
+            }
+
+            .feature-icon {
+                font-size: 1.8rem;
+                margin-bottom: 0;
+                flex-shrink: 0;
+                width: 40px;
+                text-align: center;
+                padding-top: 2px;
+            }
+
+            .feature-card-text {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .feature-card h3 {
+                font-size: 0.95rem;
+                margin-bottom: 4px;
+            }
+
+            .feature-card p {
+                font-size: 0.82rem;
+                line-height: 1.6;
+            }
+
+            .notice {
+                padding: 32px 16px;
+            }
+
+            .notice h2 {
+                font-size: 1.1rem;
+                margin-bottom: 16px;
+            }
+
+            .notice li {
+                font-size: 0.82rem;
+                padding: 5px 0;
+            }
+
+            footer {
+                padding: 28px 16px;
+            }
+
+            footer p {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -211,15 +309,21 @@
 
 <body>
     <section class="hero">
-        <h1>PokePlus</h1>
+        <h1>PokePlus＋</h1>
         <p class="tagline">ポケパラをもっと便利に</p>
         <p class="description">
-            PokePlus（ポケプラス）は、ポケパラ（pokepara.jp）をより快適に閲覧するためのブラウザアプリです。
-            ブログの読みやすさ向上、ワンタップいいね、自動ログインなど、日々の利用をサポートします。
+            PokePlus＋（ポケプラス）は、ポケパラ（sp.pokepara.jp）をより快適に閲覧するためのブラウザアプリです。
+            ブログの読みやすさ向上、ワンタップいいね、自動ログイン、ブックマークなど、日々の利用をサポートします。
         </p>
         <div class="badges">
-            <a href="#" class="badge android">Google Play で入手</a>
-            <a href="#" class="badge ios">TestFlight で入手 (iOS)</a>
+            <a href="https://play.google.com/store/apps/details?id=jp.serendipy.pokeplus" class="badge android">
+                <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.37 2.37 0 0 1-.497-1.5V3.313c0-.564.19-1.08.496-1.5zm.859-.744L15.98 7.89l-2.886 2.886L4.468 1.07zm11.516 5.457l2.225 1.283c.934.539.934 1.841 0 2.38l-2.5 1.441-2.834-2.834 3.109-2.27zm-3.97 5.677l2.834-2.204-9.283 5.358 6.449-3.154z"/></svg>
+                Google Play で入手
+            </a>
+            <a href="https://testflight.apple.com/join/8aCMV64J" class="badge ios">
+                <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                TestFlight で入手 (iOS)
+            </a>
         </div>
     </section>
 
@@ -228,18 +332,66 @@
         <div class="feature-grid">
             <div class="feature-card">
                 <div class="feature-icon">&#x1F4D6;</div>
-                <h3>余計な改行を自動削除</h3>
-                <p>ブログ記事に含まれる過剰な改行を自動的に整理し、読みやすく表示します。スクロールの手間が減り、内容に集中できます。</p>
+                <div class="feature-card-text">
+                    <h3>ブログの改行を自動整理</h3>
+                    <p>ブログ記事に含まれる過剰な改行や空白を自動的に整理し、読みやすく表示します。無駄なスクロールが減り、内容に集中できます。</p>
+                </div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">&#x1F44D;</div>
-                <h3>いいねボタンへワンタップ</h3>
-                <p>長いブログ記事でも、画面上のボタンをタップするだけで「いいね」「スーパーいいね」ボタンの位置まで一発でスクロールできます。</p>
+                <div class="feature-card-text">
+                    <h3>いいね・SPいいねをワンタップ</h3>
+                    <p>長いブログ記事でも、画面下部のボタンをタップするだけで「いいね」「スーパーいいね」の位置まで一発スクロール。いいね済みかどうかも一目で確認できます。</p>
+                </div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">&#x1F510;</div>
-                <h3>自動ログイン</h3>
-                <p>一度ログイン情報を保存すれば、次回以降は自動でログイン。毎回の入力が不要になり、すぐにコンテンツを楽しめます。</p>
+                <div class="feature-card-text">
+                    <h3>自動ログイン</h3>
+                    <p>一度ログイン情報を保存すれば、次回以降は自動でログイン。会員・女の子・店舗の3種類のログインに対応し、それぞれ個別に管理できます。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F4D1;</div>
+                <div class="feature-card-text">
+                    <h3>ブログタブで快適閲覧</h3>
+                    <p>一覧ページからブログをタップすると、オーバーレイタブで記事を表示。元のページを離れずに記事を読み、戻るのもワンタップです。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F516;</div>
+                <div class="feature-card-text">
+                    <h3>ブックマーク</h3>
+                    <p>お気に入りのページをブックマークに保存。保存したページにはメニューからすぐにアクセスでき、よく見るページへの移動がスムーズになります。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F524;</div>
+                <div class="feature-card-text">
+                    <h3>文字サイズ変更</h3>
+                    <p>標準・小・中・大の4段階から文字サイズを選択可能。お好みのサイズでブログやページを快適に閲覧できます。設定はアプリに保存されます。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F50D;</div>
+                <div class="feature-card-text">
+                    <h3>フィルタ機能</h3>
+                    <p>イイネ履歴やフォロワー一覧で「いいね済みを非表示」「お気に入り済みを非表示」に切り替え、まだチェックしていないエントリーだけを効率的に確認できます。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F381;</div>
+                <div class="feature-card-text">
+                    <h3>30日間無料おためし</h3>
+                    <p>女の子ログインまたは店舗ログインで初めてご利用いただくと、有料版の機能を30日間無料でお試しいただけます。残り日数はアプリ内で確認できます。</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F4F6;</div>
+                <div class="feature-card-text">
+                    <h3>オフライン対応</h3>
+                    <p>ネットワーク接続が切れた場合はエラー画面を表示し、復帰すると自動でページを再読み込みします。不安定な回線でも安心してご利用いただけます。</p>
+                </div>
             </div>
         </div>
     </section>
@@ -259,7 +411,7 @@
     <footer>
         <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
         <p>お問い合わせ: <a href="mailto:23taka23@gmail.com">23taka23@gmail.com</a></p>
-        <p>&copy; 2025 PokePlus</p>
+        <p>&copy; 2025 PokePlus＋</p>
     </footer>
 </body>
 
