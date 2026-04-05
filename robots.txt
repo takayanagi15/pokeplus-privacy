@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://takayanagi15.github.io/pokeplus-privacy/sitemap.xml
